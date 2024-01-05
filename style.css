@@ -291,6 +291,15 @@ body {
     right: auto;
 }
 
+.timeline li::after {
+    content: '';
+    display: table;
+}
+.timeline li::after{
+    clear: both;
+}
+
+
 .timeline li.timeline-inverted .timeline-panel::after{
     border-left-width: 0;
     border-right-width: 14px;
@@ -325,7 +334,7 @@ body {
     border: 1px solid var(--pink);
 }
 
-.rsvp button::hover {
+.rsvp button :hover {
     background-color: white;
     color: var(--pink);
     border: 1px solid white;
@@ -356,7 +365,7 @@ footer li {
 
 .audio-icon-wrapper {
     width: 4rem;
-    height: 4;
+    height: 4rem;
     font-size: 4rem;
     position: fixed;
     bottom: 2.5rem;
@@ -374,7 +383,7 @@ footer li {
 }
 
 @keyframes rotating {
-    form {
+    from {
         transform: rotate(0);
     }
     to {
