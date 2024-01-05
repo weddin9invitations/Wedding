@@ -423,20 +423,39 @@
     });
     </script>
 
-    <script>
-        const stickyTop = document.querySelector('.sticky-top');
-        const offcanvas= document.querySelector('.offcanvas');
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+  $(document).ready(function () {
+    // Fungsi untuk menonaktifkan/mengaktifkan tombol saat over-flow
+    function toggleToggleButton() {
+      var $navbarToggle = $(".navbar-toggler");
 
-        offcanvas.addEventListener('show.bs.offcanvas', function () {
-        stickyTop.style.overflow = 'visible';
-    });
+      // Periksa apakah ada over-flow pada navbar
+      if ($navbarToggle.offset().top > 0) {
+        $navbarToggle.prop("disabled", true);
+      } else {
+        $navbarToggle.prop("disabled", false);
+      }
+    }
 
-    offcanvas.addEventListener('hidden.bs.offcanvas', function () {
-        stickyTop.style.overflow = 'hidden'; 
-    });
+    // Panggil fungsi saat halaman dimuat dan saat jendela di-scroll
+    toggleToggleButton();
+    $(window).scroll(toggleToggleButton);
+  });
 
+  // Nonaktifkan tombol saat offcanvas ditampilkan
+  const stickyTop = document.querySelector('.mynavbar');
+  const offcanvas = document.querySelector('.offcanvas');
 
-    </script>
+  offcanvas.addEventListener('show.bs.offcanvas', function () {
+    stickyTop.style.overflow = 'visible';
+  });
+
+  offcanvas.addEventListener('hidden.bs.offcanvas', function () {
+    stickyTop.style.overflow = 'hidden';
+  });
+</script>
+
 
 <script>
   const rootElement = document.querySelector(":root");
@@ -520,6 +539,8 @@
 
     document.querySelector('#nama').value = nama;
   </script>
+  
+
   
 </body>
 
