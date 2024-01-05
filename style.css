@@ -446,9 +446,9 @@ footer li {
         text-align: center;
     }
 
-    /* .sticky-top {
+    .sticky-top {
         overflow: hidden;
-    } */
+    }
 
     .timeline li .timeline-image {
         width: 140px;
@@ -496,10 +496,14 @@ footer li {
         max-height: none;
     }
 
-    /* .sticky-top {
+    .sticky-top {
         overflow: hidden;
         padding-right: 5px;
-    } */
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+}
 
     .timeline li .timeline-panel {
         width: calc(100% - 130px);
