@@ -291,15 +291,6 @@ body {
     right: auto;
 }
 
-.timeline li::after {
-    content: '';
-    display: table;
-}
-.timeline li::after{
-    clear: both;
-}
-
-
 .timeline li.timeline-inverted .timeline-panel::after{
     border-left-width: 0;
     border-right-width: 14px;
@@ -334,7 +325,7 @@ body {
     border: 1px solid var(--pink);
 }
 
-.rsvp button :hover {
+.rsvp button::hover {
     background-color: white;
     color: var(--pink);
     border: 1px solid white;
@@ -365,7 +356,7 @@ footer li {
 
 .audio-icon-wrapper {
     width: 4rem;
-    height: 4rem;
+    height: 4;
     font-size: 4rem;
     position: fixed;
     bottom: 2.5rem;
@@ -383,7 +374,7 @@ footer li {
 }
 
 @keyframes rotating {
-    from {
+    form {
         transform: rotate(0);
     }
     to {
@@ -432,7 +423,7 @@ footer li {
 }
 }
 
-/* Media Query untuk Tablet */
+/* tablet */
 @media (max-width: 768px) {
     html {
         font-size: 65%;
@@ -448,18 +439,9 @@ footer li {
         text-align: center;
     }
 
-    .mynavbar .nav-link {
-        font-size: 1.8rem; /* Atur ukuran teks sesuai kebutuhan */
+    .sticky-top {
+        overflow: hidden;
     }
-
-    .offcanvas-body {
-        text-align: center; /* Untuk pusatkan tautan di tampilan mobile */
-    }
-
-    .offcanvas-header {
-        text-align: center; /* Untuk pusatkan judul di tampilan mobile */
-    }
-
 
     .timeline li .timeline-image {
         width: 140px;
@@ -471,13 +453,11 @@ footer li {
         transform: translateX(-20px);
     }
 
-    /* Tambahkan aturan berikut untuk sticky-top pada tablet */
-    .sticky-top {
-        font-size: 1.8rem; /* Atur ukuran teks sesuai kebutuhan */
-    }
+    
 }
 
-/* Media Query untuk Ponsel */
+
+/* HP */
 @media (max-width: 500px) {
     html {
         font-size: 55%;
@@ -487,20 +467,7 @@ footer li {
         padding: 0;
         margin: 3px;
     }
-
-    .mynavbar .nav-link {
-        font-size: 1.8rem; /* Atur ukuran teks sesuai kebutuhan */
-    }
-
-    .offcanvas-body {
-        text-align: center; /* Untuk pusatkan tautan di tampilan mobile */
-    }
-
-    .offcanvas-header {
-        text-align: center; /* Untuk pusatkan judul di tampilan mobile */
-    }
-
-
+    
     .timeline li .timeline-image {
         padding: 0;
         width: 75px;
@@ -516,30 +483,8 @@ footer li {
     .timeline li .timeline-panel::after {
         content: none;
     }
-    body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
     footer {
         margin-bottom: 70px;
         margin-top: auto;
     }
-
-    /* Tambahkan aturan berikut untuk sticky-top pada ponsel */
-    .sticky-top {
-        font-size: 1.5rem; /* Atur ukuran teks sesuai kebutuhan */
-    }
-
-    .block {
-        display: block; /* Pastikan class .block tetap memiliki display block */
-      }
-
-    
-      /* Ubah gaya untuk membuat teks "Design by" dan nama pengguna satu baris */
-      .block a {
-        display: inline; /* Membuat tautan menjadi inline untuk tampilan satu baris */
-        margin-left: 5px; /* Menambahkan margin untuk pemisah */
-      }
 }
