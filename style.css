@@ -522,14 +522,10 @@ footer li {
     min-height: 100vh;
 }
 
-main {
-    flex: 1;
-}
-
-footer {
-    margin-top: auto;
-}
-
+    footer {
+        margin-bottom: 70px;
+        margin-top: auto;
+    }
 
     /* Tambahkan aturan berikut untuk sticky-top pada ponsel */
     .sticky-top {
