@@ -432,7 +432,7 @@ footer li {
 }
 }
 
-/* tablet */
+/* Media Query untuk Tablet */
 @media (max-width: 768px) {
     html {
         font-size: 65%;
@@ -448,9 +448,18 @@ footer li {
         text-align: center;
     }
 
-    .sticky-top {
-        overflow: hidden;
+    .mynavbar .nav-link {
+        font-size: 1.8rem; /* Atur ukuran teks sesuai kebutuhan */
     }
+
+    .offcanvas-body {
+        text-align: center; /* Untuk pusatkan tautan di tampilan mobile */
+    }
+
+    .offcanvas-header {
+        text-align: center; /* Untuk pusatkan judul di tampilan mobile */
+    }
+
 
     .timeline li .timeline-image {
         width: 140px;
@@ -462,11 +471,13 @@ footer li {
         transform: translateX(-20px);
     }
 
-    
+    /* Tambahkan aturan berikut untuk sticky-top pada tablet */
+    .sticky-top {
+        font-size: 1.8rem; /* Atur ukuran teks sesuai kebutuhan */
+    }
 }
 
-
-/* HP */
+/* Media Query untuk Ponsel */
 @media (max-width: 500px) {
     html {
         font-size: 55%;
@@ -476,7 +487,20 @@ footer li {
         padding: 0;
         margin: 3px;
     }
-    
+
+    .mynavbar .nav-link {
+        font-size: 1.8rem; /* Atur ukuran teks sesuai kebutuhan */
+    }
+
+    .offcanvas-body {
+        text-align: center; /* Untuk pusatkan tautan di tampilan mobile */
+    }
+
+    .offcanvas-header {
+        text-align: center; /* Untuk pusatkan judul di tampilan mobile */
+    }
+
+
     .timeline li .timeline-image {
         padding: 0;
         width: 75px;
@@ -496,4 +520,20 @@ footer li {
         margin-bottom: 70px;
         margin-top: auto;
     }
+
+    /* Tambahkan aturan berikut untuk sticky-top pada ponsel */
+    .sticky-top {
+        font-size: 1.5rem; /* Atur ukuran teks sesuai kebutuhan */
+    }
+
+    .block {
+        display: block; /* Pastikan class .block tetap memiliki display block */
+      }
+
+    
+      /* Ubah gaya untuk membuat teks "Design by" dan nama pengguna satu baris */
+      .block a {
+        display: inline; /* Membuat tautan menjadi inline untuk tampilan satu baris */
+        margin-left: 5px; /* Menambahkan margin untuk pemisah */
+      }
 }
